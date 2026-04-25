@@ -1,0 +1,44 @@
+{
+  "name": "metronome",
+  "displayName": "Metronome",
+  "description": "A visual and audible metronome that reads BPM from markdown headings",
+  "version": "0.1.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "metronome.toggle",
+        "title": "Metronome: Toggle"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "metronome.toggle",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "jest",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.6.0",
+    "@types/vscode": "^1.80.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9",
+    "typescript": "^5.0.0"
+  }
+}
